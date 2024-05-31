@@ -18,7 +18,8 @@ namespace CashierApplicaiton
         }
 
         private DiscountedItem discItem;
-
+        
+        //Computation of price
         private void computeButton_Click(object sender, EventArgs e)
         {
             discItem = new DiscountedItem(itemBox.Text, Convert.ToDouble(priceBox.Text), Convert.ToInt32(quantityBox.Text), Convert.ToDouble(discountBox.Text));
@@ -28,6 +29,7 @@ namespace CashierApplicaiton
             amountTotal.Text = totalAmount;
         }
 
+        //Getting the change
         private void submitButton_Click(object sender, EventArgs e)
         {
             double totalPayment = Convert.ToDouble(paymentBox.Text);

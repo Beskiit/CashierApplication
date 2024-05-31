@@ -22,6 +22,7 @@ namespace CashierApplicaiton
             this.discounted_price = discount;
         }
 
+        //Getting the total price
         public override double getTotalPrice()
         {
             item_discount = discounted_price * 0.01;
@@ -30,12 +31,14 @@ namespace CashierApplicaiton
             return total_price;
         }
 
+        //Settings the change input
         public override void setPayment(double amount)
         {
             this.payment_amount = amount;
         }
 
 
+        //Computing the change
         public double getChange()
         {
             change = payment_amount - total_price;
