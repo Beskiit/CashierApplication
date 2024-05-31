@@ -36,5 +36,17 @@ namespace CashierApplicaiton
             discItem.setPayment(totalPayment);
             changeTotal.Text = discItem.getChange().ToString();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoginAccount login = new frmLoginAccount();
+            this.Hide();
+            login.Show();
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
